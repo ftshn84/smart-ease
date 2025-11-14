@@ -16,7 +16,7 @@ function addStudentToClass(studentName) {
   }
   if (studentName === "Queen") {
     class07Students.push(studentName);
-    return studentName + "always welcome";
+    return studentName + " always welcome";
   }
   if (studentName === " ") {
     return "This is empty,empty is not expected";
