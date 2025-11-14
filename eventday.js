@@ -37,7 +37,12 @@ function setupEventForm() {
     const diffTime = selectedDate - today;
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-    result.innerHTML = `You selected: ${dateInput.value}. That is ${diffDays} day(s) from today.`;
+    result.innerHTML =
+      "You selected: " +
+      dateInput.value +
+      ". That is" +
+      diffDays +
+      "day(s) from today.";
   });
 }
 
