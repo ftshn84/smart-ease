@@ -25,5 +25,3 @@ function getCurrentDayAndTime() {
 
 // Example usage:
 console.log(getCurrentDayAndTime());
-
-function getEventWeekday() {}
