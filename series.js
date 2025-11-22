@@ -19,15 +19,16 @@ const seriesDurations = [
   },
 ];
 
-function logOutSeriesText(sd) {
+function logOutSeriesText(series) {
   const humanTimeInMin = 80 * 365 * 24 * 60;
   let totalMoveTime = 0;
   //return humanTimeInMin;
-  for (i = 0; i < sd.length; i++) {
-    let seryTime = (sd[i].days * 24 + sd[i].hours) * 60 + sd[i].minutes;
+  for (i = 0; i < series.length; i++) {
+    let seryTime =
+      (series[i].days * 24 + series[i].hours) * 60 + series[i].minutes;
     totalMoveTime += seryTime;
     console.log(
-      sd[i].title +
+      series[i].title +
         " took " +
         ((seryTime / humanTimeInMin) * 100).toFixed(4) +
         "% of my life"
