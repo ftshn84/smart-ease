@@ -21,10 +21,10 @@ const seriesDurations = [
 
 function logOutSeriesText(series) {
   const humanTimeInMin = 80 * 365 * 24 * 60;
-  let totalMoveTime = 0;
+  const totalMoveTime = 0;
   //return humanTimeInMin;
   for (i = 0; i < series.length; i++) {
-    let seryTime =
+    const seryTime =
       (series[i].days * 24 + series[i].hours) * 60 + series[i].minutes;
     totalMoveTime += seryTime;
     console.log(
