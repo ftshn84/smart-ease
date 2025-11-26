@@ -1,5 +1,5 @@
 const savedNames = new Set();
-const todo = [];
+const todos = [];
 let addRegex = /^add (.+) to my todo$/i;
 let removeRegex = /^remove (.+) from my todo$/i;
 let listRegex = /^what is on my todo\??$/i;
