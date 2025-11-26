@@ -25,7 +25,7 @@ function toDoList(message) {
     return `${task} added to your todo`;
   }
 
-  // Remove todo
+  // Remove todos
   if (removeRegex.test(message)) {
     const task = message.match(removeRegex)[1].toLowerCase();
     const index = todos.indexOf(task);
@@ -49,15 +49,14 @@ function toDoList(message) {
   return "Message not recognized.";
 }
 
-// Example usage:
+// q1
 console.log(getReply("Hello my name is Benjamin"));
-// → Nice to meet you Benjamin
+// Nice to meet you Benjamin
 console.log(getReply("Hello my name is Fatima"));
 console.log(getReply("Hello my name is "));
-// → I already know you, Benjamin
-// Keep track of todos in an array
+//  I already know you, Benjamin
 
-// Example usage:
+// q2
 console.log(toDoList("Add fishing to my todo"));
 // fishing added to your todo
 
