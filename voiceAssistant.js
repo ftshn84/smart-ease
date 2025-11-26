@@ -17,37 +17,36 @@ function getReply(command) {
     }
   }
   return "What is my name ?";
-
-  function toDoList(message) {
-    if (addRegex.test(message)) {
-      const task = message.match(addRegex)[1].toLowerCase();
-      todos.push(task);
-      return `${task} added to your todo`;
-    }
-
-    // Remove todo
-    if (removeRegex.test(message)) {
-      const task = message.match(removeRegex)[1].toLowerCase();
-      const index = todos.indexOf(task);
-      if (index !== -1) {
-        todos.splice(index, 1);
-        return `Removed ${task} from your todo`;
-      } else {
-        return `${task} was not found in your todo`;
-      }
-    }
-
-    // List todos
-    if (listRegex.test(message)) {
-      if (todos.length === 0) {
-        return "Your todo list is empty";
-      } else {
-        return `You have ${todos.length} todos - ${todos.join(" and ")}`;
-      }
-    }
-
-    return "Message not recognized.";
+}
+function toDoList(message) {
+  if (addRegex.test(message)) {
+    const task = message.match(addRegex)[1].toLowerCase();
+    todos.push(task);
+    return `${task} added to your todo`;
   }
+
+  // Remove todo
+  if (removeRegex.test(message)) {
+    const task = message.match(removeRegex)[1].toLowerCase();
+    const index = todos.indexOf(task);
+    if (index !== -1) {
+      todos.splice(index, 1);
+      return `Removed ${task} from your todo`;
+    } else {
+      return `${task} was not found in your todo`;
+    }
+  }
+
+  // List todos
+  if (listRegex.test(message)) {
+    if (todos.length === 0) {
+      return "Your todo list is empty";
+    } else {
+      return `You have ${todos.length} todos - ${todos.join(" and ")}`;
+    }
+  }
+
+  return "Message not recognized.";
 }
 
 // Example usage:
